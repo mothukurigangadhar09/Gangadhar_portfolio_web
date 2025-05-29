@@ -10,15 +10,21 @@ export default function ProjectsSection() {
 			link: 'https://ieeexplore.ieee.org/document/10593313',
 		},
 		{
+			title: 'Hand_Arduino_led_controller_by_pyfirmata (Python-pyfirmata-protocol)',
+			description: 'An Embedded project that controls the working of LEDs with the Hand gestures using Pythons pyfirmata protocol.',
+			image: '/project_2.jpg',
+			link: 'https://ieeexplore.ieee.org/document/10593313',
+		},
+		{
 			title: 'Gangadhar_Web_Portfolio (Next.js)',
 			description: 'Responsive portfolio built with Next.js and Tailwind CSS to showcase my projects and skills.',
-			image: '/project_2.jpg',
+			image: '/project_3.jpg',
 			link: 'https://gangadhar.dev',
 		},
 		{
 			title: 'Message Automation through Whatsapp (Python)',
 			description: 'A Python-based tool that automates WhatsApp messages to send scheduled greetings and reminders.',
-			image: '/project_3.jpg',
+			image: '/project_4.jpg',
 			link: 'https://ieeexplore.ieee.org/document/10593313',
 		},
 	];
