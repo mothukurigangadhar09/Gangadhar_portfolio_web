@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const isGithubPages = process.env.NODE_ENV === 'production';
+const repoName = 'Gangadhar_portfolio_web'; // REPLACE with your GitHub repo name
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  output: 'export',
+  basePath: isGithubPages ? `/${repoName}` : '',
+  images: {
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
+
