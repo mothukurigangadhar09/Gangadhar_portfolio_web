@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { Geist, Geist_Mono } from 'next/font/google';
+import type { Metadata } from 'next';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -12,11 +12,11 @@ const geistMono = Geist_Mono({
 	subsets: ['latin'],
 });
 
-export const metadata = {
-  	title: "Gangadhar | Full Stack Developer",
+export const metadata: Metadata = {
+	title: 'Gangadhar | Full Stack Developer',
 	description:
 		'Welcome to my portfolio! I am a passionate developer who believes in simplicity and effectiveness. I focus on creating straightforward solutions that solve real problems, with clean code and intuitive user experiences.',
-	metadataBase: new URL("https://gangadhar.dev"), // for development
+	metadataBase: new URL('https://gangadhar.dev'),
 	keywords: [
 		'Full stack Developer',
 		'Python',
@@ -47,11 +47,11 @@ export const metadata = {
 	openGraph: {
 		title: 'Gangadhar Mothukuri - Developer Portfolio',
 		description: 'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
-		url: 'https://gangadhar.dev', // <- use your actual domain
+		url: 'https://gangadhar.dev',
 		siteName: 'Gangadhar Mothukuri - Portfolio',
 		images: [
 			{
-				url: '/portrait.jpg',  // <- replace this image in /public folder
+				url: '/portrait.jpg',
 				width: 1200,
 				height: 630,
 				alt: 'Gangadhar Mothukuri - Developer Portfolio',
@@ -64,7 +64,7 @@ export const metadata = {
 		card: 'summary_large_image',
 		title: 'Gangadhar Mothukuri - Developer',
 		description: 'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
-		creator: '@mothukurig55638',  // <- replace with your actual Twitter username
+		creator: '@mothukurig55638',
 		images: ['/portrait.jpg'],
 	},
 	robots: {
@@ -82,12 +82,14 @@ export const metadata = {
 
 export default function RootLayout({
 	children,
-}: Readonly<{
+}: {
 	children: React.ReactNode;
-}>) {
+}) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+				{children}
+			</body>
 		</html>
 	);
 }

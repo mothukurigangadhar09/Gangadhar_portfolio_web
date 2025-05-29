@@ -8,12 +8,19 @@ import ContactSection from './components/ContactSection';
 export default function SimplePortfolio() {
 	return (
 		<main className="min-h-screen bg-gray-900 pt-12">
-			<HeroSection />       // Intro and bio
-			<SkillsSection />     // Tech stack
-			<ProjectsSection />   // Portfolio projects
-			<ContactSection />    // Contact details or form
+			{/* Intro and bio */}
+			<HeroSection />
 
-			{/* ✅ Add footer here */}
+			{/* Tech stack */}
+			<SkillsSection />
+
+			{/* Portfolio projects */}
+			<ProjectsSection />
+
+			{/* Contact details or form */}
+			<ContactSection />
+
+			{/* Footer */}
 			<footer className="text-center text-gray-500 text-sm py-6 border-t border-gray-700 mt-12">
 				© {new Date().getFullYear()} Gangadhar Mothukuri. All rights reserved.
 			</footer>
